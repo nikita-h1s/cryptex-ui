@@ -1,54 +1,72 @@
-# React + TypeScript + Vite
+# Cryptex Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend part of the **Cryptex** cryptocurrency platform.  
+The application allows users to buy, sell, and exchange cryptocurrencies, manage their wallet, and interact with a support system.
 
-Currently, two official plugins are available:
+The interface is built with **React + TypeScript** using **Material UI** for UI components.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+# 🚀 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 🔐 Authentication with role-based access
+- 💱 Buy / Sell cryptocurrency
+- 🔄 Exchange cryptocurrencies
+- 💰 Wallet balance overview
+- 📊 Transaction history
+- 📥 Deposit funds
+- 📤 Withdraw funds
+- 📈 View live cryptocurrency prices
+- 🛠 Support/Admin management panel
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+
+# 🧩 Application Tabs
+
+The main interface of the application is organized using tabs:
+
+| Tab | Description |
+|----|----|
+| Trade | Buy or sell cryptocurrency |
+| Exchange | Convert one cryptocurrency to another |
+| Coin Prices | View current cryptocurrency prices |
+| Wallet | Display user balances and transaction history |
+| Deposit | Add funds to the wallet |
+| Withdraw | Withdraw cryptocurrency |
+| Support | Create and view support requests |
+| Support Panel | Manage support tickets (Support/Admin only) |
+
+---
+
+# 🏗 Tech Stack
+
+The frontend is built using:
+
+- **React**
+- **TypeScript**
+- **Material UI**
+- **React Hooks**
+- **REST API**
+- **Axios / Fetch API**
+
+---
+
+# ⚙️ Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/cryptex-frontend.git
+cd cryptex-frontend
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+### 2. Install dependencies
+```bash
+npm install
 ```
+
+### 3. Start development server
+```bash
+npm run dev
+```
+The application will start on: http://localhost:5173
